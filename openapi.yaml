@@ -1,0 +1,88 @@
+openapi: 3.0.1
+info:
+  title: Nông nghiệp API
+  version: 1.0.0
+servers:
+  - url: https://api.nongnghiep.vn
+paths:
+  /gia-phan-bon:
+    get:
+      summary: Tra cứu giá phân bón
+      parameters:
+        - name: ten
+          in: query
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: Giá phân bón
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  ten:
+                    type: string
+                  gia:
+                    type: number
+                  don_vi:
+                    type: string
+  /dat-lich-ky-su:
+    post:
+      summary: Đặt lịch kỹ sư nông nghiệp
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                ho_ten:
+                  type: string
+                so_dien_thoai:
+                  type: string
+                ngay_hen:
+                  type: string
+                  format: date
+                ghi_chu:
+                  type: string
+      responses:
+        "200":
+          description: Xác nhận đặt lịch
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  ma_lich:
+                    type: string
+                  trang_thai:
+                    type: string
+  /chan-doan-sau-benh:
+    post:
+      summary: Chẩn đoán sâu bệnh
+      description: Gửi tên cây trồng và triệu chứng để gợi ý nguyên nhân và cách xử lý.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                cay_trong:
+                  type: string
+                trieu_chung:
+                  type: string
+      responses:
+        "200":
+          description: Kết quả chẩn đoán
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  nguyen_nhan:
+                    type: string
+                  bien_phap:
+                    type: string
