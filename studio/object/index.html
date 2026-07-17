@@ -3,69 +3,121 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>AGRI Studio v2</title>
+  <title>AGRI Studio v2.1</title>
   <link rel="stylesheet" href="../assets/studio.css">
   <link rel="stylesheet" href="object-editor.css">
 </head>
 <body>
 <header class="topbar">
-  <a class="brand" href="../index.html"><span class="logo">A</span><span><strong>AGRI Studio v2</strong><small>Quản lý theo đối tượng tri thức</small></span></a>
+  <a class="brand" href="../index.html">
+    <span class="logo">A</span>
+    <span><strong>AGRI Studio v2.1</strong><small>Quản lý đối tượng tri thức</small></span>
+  </a>
   <div class="top-actions">
-    <button id="btn-import" class="button secondary">Nhập đối tượng</button>
-    <button id="btn-export" class="button">Xuất ga-sao.json</button>
-    <input id="file-import" type="file" accept=".json" hidden>
+    <button id="btn-new-object" class="button secondary">+ Đối tượng mới</button>
+    <button id="btn-export-index" class="button secondary">Xuất index.json</button>
+    <button id="btn-export-object" class="button">Xuất đối tượng</button>
   </div>
 </header>
 
 <main class="object-studio">
   <aside class="object-list-panel">
     <div class="panel-title">Đối tượng tri thức</div>
-    <button class="object-item active"><span>🐔</span><span><strong>Gà sao</strong><small>Chăn nuôi</small></span></button>
-    <a class="object-item link" href="../index.html"><span>📚</span><span><strong>Quản lý bài viết</strong><small>Studio v1</small></span></a>
-    <a class="object-item link" href="../../pages/object/?slug=ga-sao"><span>🌐</span><span><strong>Xem trang Gà sao</strong><small>Website</small></span></a>
+    <div id="object-list"></div>
+    <div class="side-links">
+      <a class="object-item link" href="../index.html"><span>📚</span><span><strong>Quản lý bài viết</strong><small>Studio v1</small></span></a>
+      <a class="object-item link" href="../../index.html"><span>🌐</span><span><strong>Xem website</strong><small>Trang chủ AGRI</small></span></a>
+    </div>
   </aside>
 
   <section class="object-editor-main">
     <div class="notice">
-      Dữ liệu được lưu tạm trên trình duyệt. Khi hoàn tất, bấm <strong>Xuất ga-sao.json</strong>
-      rồi thay file <code>data/objects/ga-sao.json</code> trên GitHub.
+      Dữ liệu được lưu tạm trên trình duyệt. Khi hoàn tất, xuất file đối tượng và
+      <code>index.json</code>, rồi thay các file tương ứng trong thư mục
+      <code>data/objects/</code> trên GitHub.
     </div>
 
     <div class="page-head">
-      <div><p class="eyebrow">ĐỐI TƯỢNG TRI THỨC</p><h1>🐔 Gà sao</h1></div>
+      <div>
+        <p class="eyebrow">ĐỐI TƯỢNG TRI THỨC</p>
+        <h1 id="object-heading">Chưa chọn đối tượng</h1>
+      </div>
       <button id="btn-save-all" class="button">Lưu toàn bộ</button>
     </div>
 
-    <div class="object-meta-grid">
-      <label class="field"><span>Tên đối tượng</span><input id="object-name"></label>
-      <label class="field"><span>Mã đường dẫn</span><input id="object-slug"></label>
-      <label class="field wide"><span>Mô tả ngắn</span><textarea id="object-summary" rows="3"></textarea></label>
+    <div id="editor-empty" class="empty">
+      Chọn một đối tượng ở cột bên trái hoặc bấm <strong>+ Đối tượng mới</strong>.
     </div>
 
-    <div class="editor-shell">
-      <aside id="section-tabs" class="section-tabs"></aside>
-      <section class="section-editor">
-        <div class="section-editor-head">
-          <div><p class="eyebrow">NỘI DUNG MỤC</p><h2 id="section-title">Chọn một mục</h2></div>
-          <button id="btn-add-section" class="button secondary">+ Thêm mục</button>
-        </div>
+    <div id="editor-area" hidden>
+      <div class="object-meta-grid">
+        <label class="field"><span>Tên đối tượng</span><input id="object-name"></label>
+        <label class="field"><span>Mã đường dẫn</span><input id="object-slug"></label>
+        <label class="field"><span>Biểu tượng</span><input id="object-icon" maxlength="4"></label>
+        <label class="field"><span>Chuyên mục</span>
+          <select id="object-category">
+            <option value="chan-nuoi">Chăn nuôi</option>
+            <option value="trong-trot">Trồng trọt</option>
+            <option value="thuy-san">Thủy sản</option>
+            <option value="vietgap">VietGAP</option>
+            <option value="ocop">OCOP</option>
+          </select>
+        </label>
+        <label class="field wide"><span>Mô tả ngắn</span><textarea id="object-summary" rows="3"></textarea></label>
+      </div>
 
-        <div id="section-form" hidden>
-          <label class="field"><span>Tiêu đề mục</span><input id="section-name"></label>
-          <label class="field"><span>Biểu tượng</span><input id="section-icon" maxlength="4"></label>
-          <label class="field"><span>Nội dung chính</span><textarea id="section-content" rows="10" placeholder="Mỗi đoạn cách nhau bằng một dòng trống"></textarea></label>
-          <label class="field"><span>Danh sách gạch đầu dòng</span><textarea id="section-items" rows="7" placeholder="Mỗi ý một dòng"></textarea></label>
-          <div class="form-actions">
-            <button id="btn-delete-section" class="button danger" type="button">Xóa mục</button>
-            <button id="btn-save-section" class="button" type="button">Lưu mục</button>
+      <div class="editor-shell">
+        <aside id="section-tabs" class="section-tabs"></aside>
+        <section class="section-editor">
+          <div class="section-editor-head">
+            <div><p class="eyebrow">NỘI DUNG MỤC</p><h2 id="section-title">Chọn một mục</h2></div>
+            <button id="btn-add-section" class="button secondary">+ Thêm mục</button>
           </div>
-        </div>
 
-        <div id="section-empty" class="empty">Chọn một mục ở cột bên trái để biên soạn.</div>
-      </section>
+          <div id="section-form" hidden>
+            <label class="field"><span>Tiêu đề mục</span><input id="section-name"></label>
+            <label class="field"><span>Biểu tượng</span><input id="section-icon" maxlength="4"></label>
+            <label class="field"><span>Nội dung chính</span><textarea id="section-content" rows="10" placeholder="Mỗi đoạn cách nhau bằng một dòng trống"></textarea></label>
+            <label class="field"><span>Danh sách gạch đầu dòng</span><textarea id="section-items" rows="7" placeholder="Mỗi ý một dòng"></textarea></label>
+            <div class="form-actions">
+              <button id="btn-delete-section" class="button danger" type="button">Xóa mục</button>
+              <button id="btn-save-section" class="button" type="button">Lưu mục</button>
+            </div>
+          </div>
+
+          <div id="section-empty" class="empty">Chọn một mục ở cột bên trái để biên soạn.</div>
+        </section>
+      </div>
     </div>
   </section>
 </main>
+
+<dialog id="new-object-dialog">
+  <form method="dialog" id="new-object-form">
+    <div class="dialog-head">
+      <strong>Tạo đối tượng mới</strong>
+      <button value="cancel" class="dialog-close">×</button>
+    </div>
+    <div class="dialog-body">
+      <label class="field"><span>Tên đối tượng *</span><input id="new-name" required placeholder="Ví dụ: Gà Ai Cập"></label>
+      <label class="field"><span>Chuyên mục</span>
+        <select id="new-category">
+          <option value="chan-nuoi">Chăn nuôi</option>
+          <option value="trong-trot">Trồng trọt</option>
+          <option value="thuy-san">Thủy sản</option>
+          <option value="vietgap">VietGAP</option>
+          <option value="ocop">OCOP</option>
+        </select>
+      </label>
+      <label class="field"><span>Biểu tượng</span><input id="new-icon" maxlength="4" value="📚"></label>
+      <label class="field"><span>Mô tả ngắn</span><textarea id="new-summary" rows="3"></textarea></label>
+    </div>
+    <div class="dialog-actions">
+      <button value="cancel" class="button secondary">Hủy</button>
+      <button id="create-object-confirm" value="default" class="button">Tạo đối tượng</button>
+    </div>
+  </form>
+</dialog>
 
 <script src="object-editor.js"></script>
 </body>

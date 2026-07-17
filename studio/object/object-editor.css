@@ -30,3 +30,16 @@
   .object-meta-grid{grid-template-columns:1fr}
   .wide{grid-column:auto}
 }
+
+#object-list{display:grid;gap:6px}
+.side-links{margin-top:16px;padding-top:14px;border-top:1px solid rgba(255,255,255,.15)}
+.object-item.active{background:rgba(255,255,255,.16)}
+.object-item .object-actions{margin-left:auto;display:flex;gap:4px}
+.object-item .object-actions button{border:0;background:transparent;color:#fff;padding:4px}
+.object-meta-grid{grid-template-columns:1fr 1fr 140px 220px}
+#new-object-dialog{width:min(620px,calc(100% - 28px));border:0;border-radius:18px;padding:0}
+.dialog-body{padding:20px;display:grid;gap:15px}
+.dialog-actions{display:flex;justify-content:flex-end;gap:10px;padding:0 20px 20px}
+.dialog-close{border:0;background:transparent;font-size:28px}
+@media(max-width:850px){.object-meta-grid{grid-template-columns:1fr 1fr}.object-meta-grid .wide{grid-column:1/-1}}
+@media(max-width:620px){.object-meta-grid{grid-template-columns:1fr}.object-meta-grid .wide{grid-column:auto}.top-actions{gap:6px}.top-actions .button{padding:9px 10px;font-size:13px}}
