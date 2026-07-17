@@ -1,0 +1,160 @@
+[
+  {
+    "id": "ga-sao-tong-quan",
+    "category": "chan-nuoi",
+    "categoryLabel": "Chăn nuôi",
+    "featured": true,
+    "title": "Tổng quan kỹ thuật nuôi gà sao",
+    "summary": "Những nội dung cơ bản cần chuẩn bị trước khi bắt đầu nuôi gà sao.",
+    "keywords": [
+      "gà sao",
+      "gia cầm",
+      "chuồng trại",
+      "con giống"
+    ],
+    "sections": [
+      {
+        "heading": "Chuẩn bị ban đầu",
+        "paragraphs": [
+          "Người nuôi cần xác định mục tiêu sản xuất, quy mô đàn, nguồn giống và đầu ra trước khi đầu tư."
+        ],
+        "items": [
+          "Chọn nơi cao ráo, thoát nước tốt.",
+          "Chuẩn bị nguồn điện và nước ổn định.",
+          "Lựa chọn giống có nguồn gốc rõ ràng."
+        ]
+      },
+      {
+        "heading": "Quản lý hằng ngày",
+        "paragraphs": [
+          "Theo dõi thức ăn, nước uống, môi trường chuồng nuôi và sức khỏe đàn mỗi ngày."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ga-sao-chon-giong",
+    "category": "chan-nuoi",
+    "categoryLabel": "Chăn nuôi",
+    "featured": true,
+    "title": "Cách chọn gà sao giống khỏe mạnh",
+    "summary": "Các dấu hiệu cơ bản giúp nhận biết đàn giống khỏe, đồng đều và phù hợp.",
+    "keywords": [
+      "gà sao giống",
+      "chọn giống",
+      "gà con"
+    ],
+    "sections": [
+      {
+        "heading": "Dấu hiệu cần quan sát",
+        "items": [
+          "Nhanh nhẹn, mắt sáng.",
+          "Lông khô và sạch.",
+          "Chân vững, không dị tật.",
+          "Đàn tương đối đồng đều."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "vietgap-bat-dau",
+    "category": "vietgap",
+    "categoryLabel": "VietGAP",
+    "featured": true,
+    "title": "Bắt đầu chuẩn bị hồ sơ VietGAP",
+    "summary": "Những nhóm hồ sơ cơ bản cần rà soát trước khi đăng ký đánh giá.",
+    "keywords": [
+      "VietGAP",
+      "hồ sơ",
+      "nhật ký sản xuất"
+    ],
+    "sections": [
+      {
+        "heading": "Nhóm hồ sơ cơ bản",
+        "items": [
+          "Thông tin cơ sở.",
+          "Sơ đồ khu sản xuất.",
+          "Nhật ký sản xuất.",
+          "Hồ sơ vật tư đầu vào.",
+          "Hồ sơ thu hoạch và tiêu thụ."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ocop-ho-so",
+    "category": "ocop",
+    "categoryLabel": "OCOP",
+    "featured": false,
+    "title": "Chuẩn bị hồ sơ sản phẩm OCOP",
+    "summary": "Các nhóm nội dung cần chuẩn bị khi xây dựng hồ sơ sản phẩm OCOP.",
+    "keywords": [
+      "OCOP",
+      "thương hiệu",
+      "sản phẩm"
+    ],
+    "sections": [
+      {
+        "heading": "Thông tin sản phẩm",
+        "items": [
+          "Tên sản phẩm.",
+          "Chủ thể sản xuất.",
+          "Quy trình sản xuất.",
+          "Bao bì, nhãn hiệu.",
+          "Câu chuyện sản phẩm."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "dat-nuoc-ghi-chep",
+    "category": "trong-trot",
+    "categoryLabel": "Trồng trọt",
+    "featured": true,
+    "title": "Bắt đầu ghi chép đất, nước và phân bón",
+    "summary": "Ba nhóm dữ liệu đơn giản giúp so sánh hiệu quả giữa các vụ sản xuất.",
+    "keywords": [
+      "đất",
+      "nước tưới",
+      "phân bón",
+      "nhật ký"
+    ],
+    "sections": [
+      {
+        "heading": "Nội dung nên ghi",
+        "items": [
+          "Ngày xuống giống.",
+          "Tình trạng độ ẩm đất.",
+          "Loại và lượng phân bón.",
+          "Thời điểm tưới nước.",
+          "Biểu hiện bất thường của cây."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ao-nuoi-chat-luong-nuoc",
+    "category": "thuy-san",
+    "categoryLabel": "Thủy sản",
+    "featured": true,
+    "title": "Theo dõi chất lượng nước ao nuôi",
+    "summary": "Quan sát màu nước, mùi, hoạt động vật nuôi và các thay đổi bất thường.",
+    "keywords": [
+      "ao nuôi",
+      "chất lượng nước",
+      "thủy sản"
+    ],
+    "sections": [
+      {
+        "heading": "Quan sát hằng ngày",
+        "items": [
+          "Màu và mùi nước.",
+          "Mức nước.",
+          "Hoạt động bắt mồi.",
+          "Hiện tượng nổi đầu.",
+          "Nguồn nước cấp và thoát."
+        ]
+      }
+    ]
+  }
+]
