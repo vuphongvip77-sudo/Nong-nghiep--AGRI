@@ -1,0 +1,13 @@
+[
+  {
+    "id": "book-ga-sao-001",
+    "title": "Kỹ thuật chăn nuôi gà sao",
+    "category": "chan-nuoi",
+    "status": "dang-bien-soan",
+    "formats": [
+      "docx",
+      "pdf"
+    ],
+    "description": "Cẩm nang từ chuẩn bị chuồng trại, chọn giống, úm đến quản lý đàn."
+  }
+]

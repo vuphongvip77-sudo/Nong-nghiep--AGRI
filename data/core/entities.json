@@ -1,0 +1,32 @@
+[
+  {
+    "id": "animal-ga-sao",
+    "type": "animal",
+    "name": "Gà sao",
+    "scientificName": "Numida meleagris",
+    "category": "chan-nuoi",
+    "tags": [
+      "gia cầm",
+      "gà sao",
+      "chăn nuôi"
+    ],
+    "relatedArticles": [
+      "ga-sao-tong-quan",
+      "ga-sao-chon-giong"
+    ]
+  },
+  {
+    "id": "standard-vietgap",
+    "type": "standard",
+    "name": "VietGAP",
+    "category": "vietgap",
+    "tags": [
+      "hồ sơ",
+      "nhật ký",
+      "thực hành nông nghiệp tốt"
+    ],
+    "relatedArticles": [
+      "vietgap-bat-dau"
+    ]
+  }
+]

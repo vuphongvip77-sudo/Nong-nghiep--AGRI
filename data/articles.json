@@ -30,7 +30,14 @@
           "Theo dõi thức ăn, nước uống, môi trường chuồng nuôi và sức khỏe đàn mỗi ngày."
         ]
       }
-    ]
+    ],
+    "type": "guide",
+    "status": "published",
+    "updated": "2026-07-17",
+    "entityIds": [
+      "animal-ga-sao"
+    ],
+    "related": []
   },
   {
     "id": "ga-sao-chon-giong",
@@ -54,7 +61,14 @@
           "Đàn tương đối đồng đều."
         ]
       }
-    ]
+    ],
+    "type": "guide",
+    "status": "published",
+    "updated": "2026-07-17",
+    "entityIds": [
+      "animal-ga-sao"
+    ],
+    "related": []
   },
   {
     "id": "vietgap-bat-dau",
@@ -79,7 +93,14 @@
           "Hồ sơ thu hoạch và tiêu thụ."
         ]
       }
-    ]
+    ],
+    "type": "guide",
+    "status": "published",
+    "updated": "2026-07-17",
+    "entityIds": [
+      "standard-vietgap"
+    ],
+    "related": []
   },
   {
     "id": "ocop-ho-so",
@@ -104,7 +125,12 @@
           "Câu chuyện sản phẩm."
         ]
       }
-    ]
+    ],
+    "type": "guide",
+    "status": "published",
+    "updated": "2026-07-17",
+    "entityIds": [],
+    "related": []
   },
   {
     "id": "dat-nuoc-ghi-chep",
@@ -130,7 +156,12 @@
           "Biểu hiện bất thường của cây."
         ]
       }
-    ]
+    ],
+    "type": "guide",
+    "status": "published",
+    "updated": "2026-07-17",
+    "entityIds": [],
+    "related": []
   },
   {
     "id": "ao-nuoi-chat-luong-nuoc",
@@ -155,6 +186,11 @@
           "Nguồn nước cấp và thoát."
         ]
       }
-    ]
+    ],
+    "type": "guide",
+    "status": "published",
+    "updated": "2026-07-17",
+    "entityIds": [],
+    "related": []
   }
 ]

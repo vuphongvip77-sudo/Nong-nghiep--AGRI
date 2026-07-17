@@ -1,0 +1,65 @@
+{
+  "version": "1.0",
+  "categories": [
+    {
+      "id": "trong-trot",
+      "label": "Trồng trọt",
+      "icon": "🌱",
+      "order": 1
+    },
+    {
+      "id": "chan-nuoi",
+      "label": "Chăn nuôi",
+      "icon": "🐔",
+      "order": 2
+    },
+    {
+      "id": "thuy-san",
+      "label": "Thủy sản",
+      "icon": "🐟",
+      "order": 3
+    },
+    {
+      "id": "vietgap",
+      "label": "VietGAP",
+      "icon": "📄",
+      "order": 4
+    },
+    {
+      "id": "ocop",
+      "label": "OCOP",
+      "icon": "📦",
+      "order": 5
+    },
+    {
+      "id": "thu-vien",
+      "label": "Thư viện",
+      "icon": "📚",
+      "order": 6
+    },
+    {
+      "id": "bieu-mau",
+      "label": "Biểu mẫu",
+      "icon": "📝",
+      "order": 7
+    }
+  ],
+  "contentTypes": [
+    {
+      "id": "guide",
+      "label": "Hướng dẫn kỹ thuật"
+    },
+    {
+      "id": "form",
+      "label": "Biểu mẫu"
+    },
+    {
+      "id": "book",
+      "label": "Sách"
+    },
+    {
+      "id": "faq",
+      "label": "Hỏi đáp"
+    }
+  ]
+}

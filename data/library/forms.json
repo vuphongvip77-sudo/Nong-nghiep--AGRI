@@ -1,0 +1,24 @@
+[
+  {
+    "id": "form-nhat-ky-chan-nuoi",
+    "title": "Nhật ký chăn nuôi",
+    "category": "bieu-mau",
+    "format": [
+      "xlsx",
+      "docx"
+    ],
+    "status": "dang-bo-sung",
+    "description": "Ghi theo dõi đàn, thức ăn, nước uống, vệ sinh và sức khỏe."
+  },
+  {
+    "id": "form-checklist-vietgap",
+    "title": "Checklist chuẩn bị hồ sơ VietGAP",
+    "category": "bieu-mau",
+    "format": [
+      "docx",
+      "xlsx"
+    ],
+    "status": "dang-bo-sung",
+    "description": "Danh mục hồ sơ và công việc cần rà soát trước khi đánh giá."
+  }
+]
