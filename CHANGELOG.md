@@ -1,10 +1,11 @@
 # CHANGELOG
 
-## v1.2 — AGRI Core v1.0
-- Thiết lập mô hình dữ liệu lõi.
-- Thêm danh mục chuẩn.
-- Thêm đối tượng Gà sao và VietGAP.
-- Thêm dữ liệu sách và biểu mẫu mẫu.
-- Nâng cấp metadata bài viết.
-- Bổ sung hướng dẫn quản lý nội dung không cần biết lập trình.
-- Giữ nguyên cấu trúc và giao diện website hiện tại.
+## v2.0 — AGRI Studio v1
+- Thêm giao diện quản trị nội dung bằng tiếng Việt.
+- Thêm Dashboard thống kê.
+- Thêm trình soạn bài viết theo từng phần.
+- Hỗ trợ sửa, xóa, tìm kiếm và lọc bài.
+- Hỗ trợ xem trước nội dung.
+- Lưu tạm dữ liệu bằng trình duyệt.
+- Nhập và xuất `articles.json`.
+- Không cần chỉnh sửa HTML hoặc JSON bằng tay.

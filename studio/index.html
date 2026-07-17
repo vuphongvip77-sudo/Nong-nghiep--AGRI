@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>AGRI Studio</title>
+  <link rel="stylesheet" href="assets/studio.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="../index.html">
+      <span class="logo">A</span>
+      <span><strong>AGRI Studio</strong><small>Quản lý nội dung không cần lập trình</small></span>
+    </a>
+    <div class="top-actions">
+      <button id="btn-import" class="button secondary">Nhập JSON</button>
+      <button id="btn-export" class="button">Xuất articles.json</button>
+      <input id="file-import" type="file" accept=".json,application/json" hidden>
+    </div>
+  </header>
+
+  <main class="layout">
+    <aside class="sidebar">
+      <button class="nav-item active" data-view="dashboard">📊 Tổng quan</button>
+      <button class="nav-item" data-view="editor">➕ Thêm bài viết</button>
+      <button class="nav-item" data-view="list">📚 Danh sách bài</button>
+      <a class="nav-item link" href="../index.html">🌐 Xem website</a>
+    </aside>
+
+    <section class="content">
+      <div id="notice" class="notice">
+        AGRI Studio chạy trực tiếp trên GitHub Pages. Dữ liệu được lưu tạm trên trình duyệt.
+        Khi hoàn tất, bấm <strong>Xuất articles.json</strong> rồi tải file đó lên thư mục
+        <code>data/</code> của GitHub.
+      </div>
+
+      <section id="view-dashboard" class="view active">
+        <div class="page-head">
+          <div><p class="eyebrow">TỔNG QUAN</p><h1>Kho nội dung AGRI</h1></div>
+          <button class="button" data-open-editor>+ Thêm bài</button>
+        </div>
+        <div class="stats">
+          <article><span id="stat-total">0</span><small>Tổng bài viết</small></article>
+          <article><span id="stat-published">0</span><small>Đã xuất bản</small></article>
+          <article><span id="stat-featured">0</span><small>Bài nổi bật</small></article>
+          <article><span id="stat-draft">0</span><small>Bản nháp</small></article>
+        </div>
+        <div class="panel">
+          <div class="panel-head"><h2>Bài cập nhật gần đây</h2></div>
+          <div id="recent-list" class="article-list"></div>
+        </div>
+      </section>
+
+      <section id="view-editor" class="view">
+        <div class="page-head">
+          <div><p class="eyebrow">BIÊN SOẠN</p><h1 id="editor-title">Thêm bài viết</h1></div>
+          <button id="btn-reset" class="button secondary">Tạo bài mới</button>
+        </div>
+
+        <form id="article-form" class="editor-grid">
+          <input id="edit-index" type="hidden">
+
+          <label class="field wide">
+            <span>Tiêu đề bài viết *</span>
+            <input id="title" required placeholder="Ví dụ: Kỹ thuật úm gà sao">
+          </label>
+
+          <label class="field">
+            <span>Chuyên mục *</span>
+            <select id="category" required>
+              <option value="trong-trot">Trồng trọt</option>
+              <option value="chan-nuoi">Chăn nuôi</option>
+              <option value="thuy-san">Thủy sản</option>
+              <option value="vietgap">VietGAP</option>
+              <option value="ocop">OCOP</option>
+            </select>
+          </label>
+
+          <label class="field">
+            <span>Trạng thái</span>
+            <select id="status">
+              <option value="published">Đã xuất bản</option>
+              <option value="draft">Bản nháp</option>
+            </select>
+          </label>
+
+          <label class="field wide">
+            <span>Mô tả ngắn *</span>
+            <textarea id="summary" required rows="3" placeholder="Mô tả ngắn để hiển thị ở danh sách bài"></textarea>
+          </label>
+
+          <label class="field wide">
+            <span>Từ khóa</span>
+            <input id="keywords" placeholder="gà sao, úm gà, nhiệt độ, thức ăn">
+          </label>
+
+          <label class="check wide">
+            <input id="featured" type="checkbox">
+            <span>Hiển thị ở mục nội dung nổi bật</span>
+          </label>
+
+          <div class="wide">
+            <div class="section-toolbar">
+              <h2>Nội dung bài viết</h2>
+              <button id="btn-add-section" type="button" class="button secondary">+ Thêm phần</button>
+            </div>
+            <div id="sections"></div>
+          </div>
+
+          <div class="form-actions wide">
+            <button type="button" id="btn-preview" class="button secondary">Xem trước</button>
+            <button type="submit" class="button">Lưu bài viết</button>
+          </div>
+        </form>
+      </section>
+
+      <section id="view-list" class="view">
+        <div class="page-head">
+          <div><p class="eyebrow">QUẢN LÝ</p><h1>Danh sách bài viết</h1></div>
+          <button class="button" data-open-editor>+ Thêm bài</button>
+        </div>
+        <div class="filters">
+          <input id="filter-text" placeholder="Tìm theo tiêu đề hoặc từ khóa...">
+          <select id="filter-category">
+            <option value="">Tất cả chuyên mục</option>
+            <option value="trong-trot">Trồng trọt</option>
+            <option value="chan-nuoi">Chăn nuôi</option>
+            <option value="thuy-san">Thủy sản</option>
+            <option value="vietgap">VietGAP</option>
+            <option value="ocop">OCOP</option>
+          </select>
+        </div>
+        <div id="all-list" class="article-list"></div>
+      </section>
+    </section>
+  </main>
+
+  <dialog id="preview-dialog">
+    <div class="dialog-head">
+      <strong>Xem trước bài viết</strong>
+      <button id="close-preview">×</button>
+    </div>
+    <article id="preview-content"></article>
+  </dialog>
+
+  <template id="section-template">
+    <article class="section-card">
+      <div class="section-card-head">
+        <strong>Phần nội dung</strong>
+        <button type="button" class="remove-section">Xóa</button>
+      </div>
+      <label class="field">
+        <span>Tiêu đề phần</span>
+        <input class="section-heading" placeholder="Ví dụ: Chuẩn bị chuồng úm">
+      </label>
+      <label class="field">
+        <span>Nội dung</span>
+        <textarea class="section-body" rows="6" placeholder="Mỗi đoạn cách nhau bằng một dòng trống.&#10;Danh sách gạch đầu dòng bắt đầu bằng dấu -"></textarea>
+      </label>
+    </article>
+  </template>
+
+  <script src="assets/studio.js"></script>
+</body>
+</html>
