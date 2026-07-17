@@ -1,10 +1,10 @@
 # CHANGELOG
 
-## v2.1 — AGRI Studio
-- Thêm nút **Đối tượng mới**.
-- Tự tạo mã đường dẫn và file JSON theo tên đối tượng.
-- Tự tạo 10 mục nội dung mặc định.
-- Quản lý nhiều đối tượng trong cùng một Studio.
-- Hỗ trợ xóa đối tượng.
-- Xuất riêng file đối tượng.
-- Xuất `index.json` để cập nhật danh sách đối tượng trên website.
+## v3.0 — AGRI Knowledge Base
+- Thêm cấu trúc Knowledge Base ổn định.
+- Chuyển đối tượng Gà sao sang `knowledge/animals/`.
+- Thêm chỉ mục trung tâm `knowledge/index/knowledge.json`.
+- Thêm Dashboard quản lý Knowledge Base.
+- Thêm bộ lọc và tìm kiếm đối tượng.
+- Thêm trang hiển thị Knowledge Base công khai.
+- Giữ nguyên `data/objects/` để tương thích ngược.
