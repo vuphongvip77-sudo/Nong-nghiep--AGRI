@@ -1,0 +1,117 @@
+{
+  "id": "animal-ga-sao",
+  "slug": "ga-sao",
+  "name": "Gà sao",
+  "category": "chan-nuoi",
+  "icon": "🐔",
+  "summary": "Kho tri thức tổng hợp về giống, chuồng trại, úm, dinh dưỡng, sức khỏe và quản lý đàn gà sao.",
+  "updated": "2026-07-17",
+  "sections": [
+    {
+      "id": "tong-quan",
+      "title": "Tổng quan",
+      "icon": "📖",
+      "content": [
+        "Gà sao là loài gia cầm được nuôi để lấy thịt, trứng và con giống.",
+        "Người nuôi cần xác định mục tiêu sản xuất, quy mô đàn, nguồn giống và đầu ra trước khi đầu tư."
+      ],
+      "items": [
+        "Theo dõi đàn hằng ngày.",
+        "Ghi chép thức ăn, nước uống và hao hụt.",
+        "Duy trì vệ sinh và an toàn sinh học."
+      ]
+    },
+    {
+      "id": "chuong-trai",
+      "title": "Chuồng trại",
+      "icon": "🏠",
+      "content": [
+        "Chuồng nuôi cần cao ráo, thoát nước tốt, thông thoáng nhưng không bị gió lùa trực tiếp."
+      ],
+      "items": [
+        "Có khu úm riêng.",
+        "Có kho thức ăn và khu chứa dụng cụ.",
+        "Có nơi thu gom và xử lý chất thải."
+      ]
+    },
+    {
+      "id": "con-giong",
+      "title": "Con giống",
+      "icon": "🐣",
+      "content": [
+        "Chọn con giống khỏe mạnh, nhanh nhẹn, đồng đều và có nguồn gốc rõ ràng."
+      ],
+      "items": [
+        "Mắt sáng, lông khô và sạch.",
+        "Chân vững, không dị tật.",
+        "Phản ứng nhanh với tiếng động."
+      ]
+    },
+    {
+      "id": "um",
+      "title": "Úm gà",
+      "icon": "🔥",
+      "content": [
+        "Giai đoạn úm có ảnh hưởng lớn đến tỷ lệ nuôi sống và khả năng sinh trưởng của đàn."
+      ],
+      "items": [
+        "Kiểm tra khu úm trước khi nhập đàn.",
+        "Bố trí máng ăn và máng uống đều.",
+        "Quan sát sự phân bố của đàn nhiều lần trong ngày."
+      ]
+    },
+    {
+      "id": "thuc-an",
+      "title": "Thức ăn",
+      "icon": "🌽",
+      "content": [
+        "Thức ăn phải phù hợp với giai đoạn phát triển, có nguồn gốc rõ ràng và không bị nấm mốc."
+      ],
+      "items": [
+        "Không thay đổi thức ăn đột ngột.",
+        "Theo dõi lượng ăn hằng ngày.",
+        "Bảo quản thức ăn nơi khô ráo."
+      ]
+    },
+    {
+      "id": "nuoc-uong",
+      "title": "Nước uống",
+      "icon": "💧",
+      "content": [
+        "Nước uống cần sạch, được cung cấp liên tục và không có mùi lạ."
+      ],
+      "items": [
+        "Vệ sinh máng uống hằng ngày.",
+        "Kiểm tra rò rỉ nước.",
+        "Theo dõi mức tiêu thụ nước."
+      ]
+    },
+    {
+      "id": "suc-khoe",
+      "title": "Sức khỏe và phòng bệnh",
+      "icon": "🩺",
+      "content": [
+        "Quan sát đàn hằng ngày để phát hiện sớm dấu hiệu giảm ăn, ủ rũ, đi lại bất thường hoặc thay đổi phân."
+      ],
+      "items": [
+        "Cách ly cá thể bất thường khi cần.",
+        "Ghi chép đầy đủ diễn biến sức khỏe.",
+        "Liên hệ cán bộ thú y khi nghi ngờ dịch bệnh."
+      ]
+    },
+    {
+      "id": "bieu-mau",
+      "title": "Biểu mẫu",
+      "icon": "📝",
+      "content": [
+        "Nhật ký chăn nuôi giúp theo dõi đàn, thức ăn, nước uống, vệ sinh, thuốc thú y và chi phí."
+      ],
+      "items": [
+        "Nhật ký nhập giống.",
+        "Nhật ký thức ăn và nước uống.",
+        "Theo dõi tăng trọng và hao hụt.",
+        "Theo dõi thuốc thú y và vắc xin."
+      ]
+    }
+  ]
+}

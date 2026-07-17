@@ -1,11 +1,9 @@
 # CHANGELOG
 
-## v2.0 — AGRI Studio v1
-- Thêm giao diện quản trị nội dung bằng tiếng Việt.
-- Thêm Dashboard thống kê.
-- Thêm trình soạn bài viết theo từng phần.
-- Hỗ trợ sửa, xóa, tìm kiếm và lọc bài.
-- Hỗ trợ xem trước nội dung.
-- Lưu tạm dữ liệu bằng trình duyệt.
-- Nhập và xuất `articles.json`.
-- Không cần chỉnh sửa HTML hoặc JSON bằng tay.
+## v2.1 — AGRI Studio v2
+- Chuyển sang quản lý theo đối tượng tri thức.
+- Tạo đối tượng mẫu Gà sao.
+- Thêm trình biên soạn theo từng mục.
+- Thêm trang hiển thị công khai cho Gà sao.
+- Hỗ trợ nhập, lưu tạm và xuất `ga-sao.json`.
+- Không thêm trường người biên soạn hoặc người kiểm duyệt.

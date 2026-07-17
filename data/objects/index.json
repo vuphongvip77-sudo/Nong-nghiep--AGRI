@@ -1,0 +1,14 @@
+{
+  "version": "1.0",
+  "objects": [
+    {
+      "id": "animal-ga-sao",
+      "slug": "ga-sao",
+      "name": "Gà sao",
+      "category": "chan-nuoi",
+      "icon": "🐔",
+      "summary": "Kho tri thức tổng hợp về giống, chuồng trại, úm, dinh dưỡng, sức khỏe và quản lý đàn gà sao.",
+      "file": "ga-sao.json"
+    }
+  ]
+}

@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>AGRI Studio v2</title>
+  <link rel="stylesheet" href="../assets/studio.css">
+  <link rel="stylesheet" href="object-editor.css">
+</head>
+<body>
+<header class="topbar">
+  <a class="brand" href="../index.html"><span class="logo">A</span><span><strong>AGRI Studio v2</strong><small>Quản lý theo đối tượng tri thức</small></span></a>
+  <div class="top-actions">
+    <button id="btn-import" class="button secondary">Nhập đối tượng</button>
+    <button id="btn-export" class="button">Xuất ga-sao.json</button>
+    <input id="file-import" type="file" accept=".json" hidden>
+  </div>
+</header>
+
+<main class="object-studio">
+  <aside class="object-list-panel">
+    <div class="panel-title">Đối tượng tri thức</div>
+    <button class="object-item active"><span>🐔</span><span><strong>Gà sao</strong><small>Chăn nuôi</small></span></button>
+    <a class="object-item link" href="../index.html"><span>📚</span><span><strong>Quản lý bài viết</strong><small>Studio v1</small></span></a>
+    <a class="object-item link" href="../../pages/object/?slug=ga-sao"><span>🌐</span><span><strong>Xem trang Gà sao</strong><small>Website</small></span></a>
+  </aside>
+
+  <section class="object-editor-main">
+    <div class="notice">
+      Dữ liệu được lưu tạm trên trình duyệt. Khi hoàn tất, bấm <strong>Xuất ga-sao.json</strong>
+      rồi thay file <code>data/objects/ga-sao.json</code> trên GitHub.
+    </div>
+
+    <div class="page-head">
+      <div><p class="eyebrow">ĐỐI TƯỢNG TRI THỨC</p><h1>🐔 Gà sao</h1></div>
+      <button id="btn-save-all" class="button">Lưu toàn bộ</button>
+    </div>
+
+    <div class="object-meta-grid">
+      <label class="field"><span>Tên đối tượng</span><input id="object-name"></label>
+      <label class="field"><span>Mã đường dẫn</span><input id="object-slug"></label>
+      <label class="field wide"><span>Mô tả ngắn</span><textarea id="object-summary" rows="3"></textarea></label>
+    </div>
+
+    <div class="editor-shell">
+      <aside id="section-tabs" class="section-tabs"></aside>
+      <section class="section-editor">
+        <div class="section-editor-head">
+          <div><p class="eyebrow">NỘI DUNG MỤC</p><h2 id="section-title">Chọn một mục</h2></div>
+          <button id="btn-add-section" class="button secondary">+ Thêm mục</button>
+        </div>
+
+        <div id="section-form" hidden>
+          <label class="field"><span>Tiêu đề mục</span><input id="section-name"></label>
+          <label class="field"><span>Biểu tượng</span><input id="section-icon" maxlength="4"></label>
+          <label class="field"><span>Nội dung chính</span><textarea id="section-content" rows="10" placeholder="Mỗi đoạn cách nhau bằng một dòng trống"></textarea></label>
+          <label class="field"><span>Danh sách gạch đầu dòng</span><textarea id="section-items" rows="7" placeholder="Mỗi ý một dòng"></textarea></label>
+          <div class="form-actions">
+            <button id="btn-delete-section" class="button danger" type="button">Xóa mục</button>
+            <button id="btn-save-section" class="button" type="button">Lưu mục</button>
+          </div>
+        </div>
+
+        <div id="section-empty" class="empty">Chọn một mục ở cột bên trái để biên soạn.</div>
+      </section>
+    </div>
+  </section>
+</main>
+
+<script src="object-editor.js"></script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+
+.object-studio{display:grid;grid-template-columns:260px 1fr;min-height:calc(100vh - 74px)}
+.object-list-panel{background:#173f2b;padding:18px 12px;color:#fff}
+.panel-title{font-weight:800;padding:10px 12px;color:#cfe0d4}
+.object-item{display:flex;align-items:center;gap:12px;width:100%;border:0;background:transparent;color:#fff;padding:12px;border-radius:11px;text-align:left;text-decoration:none;margin-bottom:6px}
+.object-item.active,.object-item:hover{background:rgba(255,255,255,.13)}
+.object-item strong,.object-item small{display:block}
+.object-item small{color:#c6d8cb}
+.object-editor-main{padding:26px;min-width:0}
+.object-meta-grid{display:grid;grid-template-columns:1fr 1fr;gap:15px;background:#fff;border:1px solid var(--line);border-radius:16px;padding:20px;margin-bottom:20px}
+.editor-shell{display:grid;grid-template-columns:240px 1fr;background:#fff;border:1px solid var(--line);border-radius:16px;overflow:hidden}
+.section-tabs{border-right:1px solid var(--line);padding:12px;background:#f8faf8}
+.section-tab{width:100%;border:0;background:transparent;padding:11px;border-radius:9px;text-align:left;display:flex;gap:9px;align-items:center}
+.section-tab.active,.section-tab:hover{background:var(--soft);color:var(--green)}
+.section-editor{padding:22px;min-width:0}
+.section-editor-head{display:flex;justify-content:space-between;gap:15px;align-items:end;margin-bottom:18px}
+#section-form{display:grid;gap:15px}
+.button.danger{background:#fff;color:#b63a3a;border:1px solid #e2bcbc}
+.empty{padding:30px;border:1px dashed #b9c9be;border-radius:12px;color:var(--muted);text-align:center}
+@media(max-width:900px){
+  .object-studio{grid-template-columns:1fr}
+  .object-list-panel{display:flex;overflow:auto}
+  .object-item{min-width:180px}
+  .editor-shell{grid-template-columns:1fr}
+  .section-tabs{display:flex;overflow:auto;border-right:0;border-bottom:1px solid var(--line)}
+  .section-tab{min-width:150px}
+}
+@media(max-width:620px){
+  .object-editor-main{padding:14px}
+  .object-meta-grid{grid-template-columns:1fr}
+  .wide{grid-column:auto}
+}
