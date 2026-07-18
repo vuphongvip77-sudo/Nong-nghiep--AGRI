@@ -1,11 +1,9 @@
 # CHANGELOG
 
-## v7.1 — Backend Foundation
-- Thêm backend Node.js không phụ thuộc thư viện ngoài.
-- Thêm API kiểm tra trạng thái.
-- Thêm đăng nhập và đăng xuất.
-- Thêm phiên đăng nhập Bearer token.
-- Thêm quản lý người dùng cơ bản.
-- Thêm nhật ký hoạt động.
-- Thêm API sao lưu.
-- Lưu mật khẩu bằng scrypt.
+## v7.2 — Auth Integration
+- Thêm trang đăng nhập kết nối Backend API.
+- Lưu Bearer token trên trình duyệt.
+- Thêm trang tài khoản và đăng xuất.
+- Thêm trang Backend Admin đọc người dùng và nhật ký qua API.
+- Thêm cấu hình địa chỉ Backend.
+- Tích hợp đăng nhập vào Dashboard.

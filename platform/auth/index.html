@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Đăng nhập AGRI Platform</title>
+  <link rel="stylesheet" href="../assets/platform.css">
+  <link rel="stylesheet" href="assets/auth.css">
+</head>
+<body>
+<main class="auth-page">
+  <section class="auth-card">
+    <a class="brand" href="../">
+      <span class="logo">A</span>
+      <span><strong>AGRI Platform</strong><small>Đăng nhập hệ thống</small></span>
+    </a>
+
+    <div id="login-view">
+      <p class="eyebrow">XÁC THỰC</p>
+      <h1>Đăng nhập</h1>
+      <p class="lead">Kết nối với AGRI Backend để sử dụng tài khoản và phân quyền thật.</p>
+
+      <form id="login-form">
+        <label class="field">
+          <span>Địa chỉ Backend</span>
+          <input id="api-base" value="http://127.0.0.1:8787" required>
+        </label>
+        <label class="field">
+          <span>Tên đăng nhập</span>
+          <input id="username" autocomplete="username" required>
+        </label>
+        <label class="field">
+          <span>Mật khẩu</span>
+          <input id="password" type="password" autocomplete="current-password" required>
+        </label>
+        <div id="login-message" class="message" hidden></div>
+        <button class="button full" type="submit">Đăng nhập</button>
+      </form>
+    </div>
+
+    <div id="account-view" hidden>
+      <p class="eyebrow">TÀI KHOẢN</p>
+      <h1 id="account-name"></h1>
+      <div class="account-info">
+        <div><span>Tên đăng nhập</span><strong id="account-username"></strong></div>
+        <div><span>Vai trò</span><strong id="account-role"></strong></div>
+      </div>
+      <div class="account-actions">
+        <a class="button" href="../">Mở Dashboard</a>
+        <button id="btn-logout" class="button secondary">Đăng xuất</button>
+      </div>
+    </div>
+
+    <div class="auth-note">
+      <strong>Lưu ý</strong>
+      <p>GitHub Pages chỉ là giao diện. Đăng nhập thật chỉ hoạt động khi Backend đang chạy và cho phép kết nối từ trang này.</p>
+    </div>
+  </section>
+</main>
+<script src="assets/auth.js"></script>
+</body>
+</html>

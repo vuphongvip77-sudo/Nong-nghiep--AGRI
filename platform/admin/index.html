@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>AGRI Admin v7.2</title>
+  <link rel="stylesheet" href="../assets/platform.css">
+  <link rel="stylesheet" href="assets/admin.css">
+</head>
+<body>
+<header class="topbar">
+  <a class="brand" href="../"><span class="logo">A</span><span><strong>AGRI Admin v7.2</strong><small>Quản trị qua Backend API</small></span></a>
+  <div class="top-actions"><a class="button secondary" href="../auth/">Tài khoản</a><button id="reload" class="button">Tải lại</button></div>
+</header>
+<main class="admin-page">
+  <div id="guard" class="guard">
+    <h1>Đang kiểm tra đăng nhập...</h1>
+  </div>
+  <div id="content" hidden>
+    <div class="page-head"><div><p class="eyebrow">BACKEND ADMIN</p><h1>Quản trị người dùng</h1></div></div>
+    <div class="grid-2">
+      <section class="panel"><h2>Người dùng</h2><div id="users"></div></section>
+      <section class="panel"><h2>Nhật ký gần đây</h2><div id="logs"></div></section>
+    </div>
+  </div>
+</main>
+<script src="assets/admin.js"></script>
+</body>
+</html>
