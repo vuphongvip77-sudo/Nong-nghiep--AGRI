@@ -1,10 +1,10 @@
 # CHANGELOG
 
-## v5.3 — Publish Engine
-- Thêm kiểm tra dữ liệu trước khi xuất bản.
-- Phân loại lỗi và cảnh báo.
-- Tự tạo file JSON cho mọi đối tượng hợp lệ.
-- Tự tạo `knowledge.json`.
-- Hiển thị chính xác thư mục đích.
-- Tải lần lượt toàn bộ file xuất bản.
-- Tích hợp với Dashboard và Editor.
+## v5.4 — Media Library
+- Thêm Media Library tích hợp.
+- Quản lý hình ảnh, video, PDF, Word và Excel.
+- Thêm tìm kiếm, lọc và sắp xếp.
+- Thêm, sửa và xóa thông tin tệp.
+- Thêm nhập và xuất `media.json`.
+- Thêm cấu trúc thư mục `media/`.
+- Tích hợp với Dashboard.

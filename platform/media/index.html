@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>AGRI Media Library v5.4</title>
+  <link rel="stylesheet" href="../assets/platform.css">
+  <link rel="stylesheet" href="assets/media.css">
+</head>
+<body>
+<header class="topbar">
+  <a class="brand" href="../">
+    <span class="logo">A</span>
+    <span><strong>AGRI Media Library v5.4</strong><small>Quản lý ảnh, video và tài liệu</small></span>
+  </a>
+  <div class="top-actions">
+    <button id="btn-import" class="button secondary">Nhập danh mục</button>
+    <button id="btn-export" class="button">Xuất media.json</button>
+    <input id="import-file" type="file" accept=".json,application/json" hidden>
+  </div>
+</header>
+
+<main class="media-layout">
+  <aside class="media-sidebar">
+    <div class="panel-title">Loại tệp</div>
+    <button class="filter active" data-type="">📚 Tất cả</button>
+    <button class="filter" data-type="image">🖼 Hình ảnh</button>
+    <button class="filter" data-type="video">🎥 Video</button>
+    <button class="filter" data-type="pdf">📕 PDF</button>
+    <button class="filter" data-type="word">📄 Word</button>
+    <button class="filter" data-type="excel">📊 Excel</button>
+    <a class="filter link" href="../">🏠 Dashboard</a>
+  </aside>
+
+  <section class="media-main">
+    <div class="page-head">
+      <div>
+        <p class="eyebrow">THƯ VIỆN</p>
+        <h1>Kho tệp AGRI</h1>
+        <p class="lead">Quản lý thông tin tệp và chuẩn bị dữ liệu để đưa lên website.</p>
+      </div>
+      <button id="btn-new" class="button">+ Thêm tệp</button>
+    </div>
+
+    <div class="stats">
+      <article><span id="stat-total">0</span><small>Tổng tệp</small></article>
+      <article><span id="stat-image">0</span><small>Hình ảnh</small></article>
+      <article><span id="stat-document">0</span><small>Tài liệu</small></article>
+      <article><span id="stat-video">0</span><small>Video</small></article>
+    </div>
+
+    <div class="toolbar">
+      <input id="search" placeholder="Tìm theo tên, mô tả hoặc đối tượng liên quan...">
+      <select id="sort">
+        <option value="name">Sắp xếp theo tên</option>
+        <option value="updated">Mới cập nhật</option>
+        <option value="type">Theo loại</option>
+      </select>
+    </div>
+
+    <div id="media-grid" class="media-grid"></div>
+  </section>
+</main>
+
+<dialog id="media-dialog">
+  <form method="dialog" id="media-form">
+    <div class="dialog-head">
+      <strong id="dialog-title">Thêm tệp</strong>
+      <button value="cancel" class="dialog-close">×</button>
+    </div>
+
+    <div class="dialog-body">
+      <input id="edit-index" type="hidden">
+
+      <label class="field">
+        <span>Tên hiển thị *</span>
+        <input id="name" required>
+      </label>
+
+      <label class="field">
+        <span>Loại tệp</span>
+        <select id="type">
+          <option value="image">Hình ảnh</option>
+          <option value="video">Video</option>
+          <option value="pdf">PDF</option>
+          <option value="word">Word</option>
+          <option value="excel">Excel</option>
+        </select>
+      </label>
+
+      <label class="field wide">
+        <span>Đường dẫn tệp *</span>
+        <input id="path" placeholder="Ví dụ: media/images/ga-sao/chuong-um.jpg" required>
+      </label>
+
+      <label class="field wide">
+        <span>Mô tả</span>
+        <textarea id="description" rows="4"></textarea>
+      </label>
+
+      <label class="field">
+        <span>Đối tượng liên quan</span>
+        <input id="object-slug" placeholder="ga-sao">
+      </label>
+
+      <label class="field">
+        <span>Từ khóa</span>
+        <input id="keywords" placeholder="chuồng úm, gà sao">
+      </label>
+
+      <label class="field wide">
+        <span>Ảnh xem trước hoặc liên kết video</span>
+        <input id="preview-url" placeholder="Có thể để trống">
+      </label>
+    </div>
+
+    <div class="dialog-actions">
+      <button value="cancel" class="button secondary">Hủy</button>
+      <button id="btn-save" value="default" class="button">Lưu tệp</button>
+    </div>
+  </form>
+</dialog>
+
+<script src="assets/media.js"></script>
+</body>
+</html>
