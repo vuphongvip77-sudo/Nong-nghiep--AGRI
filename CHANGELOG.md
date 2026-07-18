@@ -1,10 +1,11 @@
 # CHANGELOG
 
-## v5.4 — Media Library
-- Thêm Media Library tích hợp.
-- Quản lý hình ảnh, video, PDF, Word và Excel.
+## v5.5 — Document Library
+- Thêm Document Library tích hợp.
+- Quản lý PDF, Word, Excel và PowerPoint.
+- Thêm cây danh mục tài liệu.
 - Thêm tìm kiếm, lọc và sắp xếp.
-- Thêm, sửa và xóa thông tin tệp.
-- Thêm nhập và xuất `media.json`.
-- Thêm cấu trúc thư mục `media/`.
-- Tích hợp với Dashboard.
+- Gắn tài liệu với đối tượng tri thức.
+- Thêm xem trước PDF và tải tài liệu.
+- Thêm nhập và xuất `documents.json`.
+- Tích hợp với Dashboard và Media Library.
