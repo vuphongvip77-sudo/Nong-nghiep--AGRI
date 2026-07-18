@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>AGRI AI Assistant v6.0</title>
+  <link rel="stylesheet" href="../assets/platform.css">
+  <link rel="stylesheet" href="assets/ai.css">
+</head>
+<body>
+<header class="topbar">
+  <a class="brand" href="../">
+    <span class="logo">A</span>
+    <span><strong>AGRI AI Assistant v6.0</strong><small>Trợ lý tra cứu trên dữ liệu AGRI</small></span>
+  </a>
+  <div class="top-actions">
+    <button id="btn-clear" class="button secondary">Xóa hội thoại</button>
+    <a class="button" href="../search/">Tìm kiếm nâng cao</a>
+  </div>
+</header>
+
+<div class="ai-shell">
+  <aside class="ai-sidebar">
+    <div class="panel-title">Câu hỏi gợi ý</div>
+    <button class="suggestion-btn">🐔 Kỹ thuật nuôi gà sao</button>
+    <button class="suggestion-btn">🔥 Úm gà sao thế nào?</button>
+    <button class="suggestion-btn">🌽 Thức ăn cho gà sao</button>
+    <button class="suggestion-btn">🩺 Phòng bệnh cho gà sao</button>
+    <button class="suggestion-btn">📄 Hồ sơ VietGAP</button>
+    <button class="suggestion-btn">📦 Tài liệu và biểu mẫu</button>
+
+    <div class="side-note">
+      <strong>Lưu ý</strong>
+      <p>Phiên bản này trả lời bằng cách tra cứu và tổng hợp dữ liệu đang có trong AGRI. Không thay thế bác sĩ thú y hoặc kỹ sư nông nghiệp tại địa phương.</p>
+    </div>
+  </aside>
+
+  <main class="chat-area">
+    <section id="chat-log" class="chat-log">
+      <article class="message assistant">
+        <div class="avatar">🤖</div>
+        <div class="bubble">
+          <h3>Xin chào, tôi là AGRI AI Assistant</h3>
+          <p>Hãy hỏi về cây trồng, vật nuôi, thủy sản, VietGAP, OCOP, tài liệu hoặc biểu mẫu trong hệ thống.</p>
+        </div>
+      </article>
+    </section>
+
+    <section class="composer">
+      <textarea id="question" rows="3" placeholder="Nhập câu hỏi của anh..."></textarea>
+      <div class="composer-actions">
+        <span id="status">Sẵn sàng</span>
+        <button id="btn-send" class="button">Gửi câu hỏi</button>
+      </div>
+    </section>
+  </main>
+</div>
+
+<script src="assets/ai.js"></script>
+</body>
+</html>
