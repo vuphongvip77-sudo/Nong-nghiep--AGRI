@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>AGRI Publish Engine v5.3</title>
+  <link rel="stylesheet" href="../assets/platform.css">
+  <link rel="stylesheet" href="assets/publish.css">
+</head>
+<body>
+<header class="topbar">
+  <a class="brand" href="../">
+    <span class="logo">A</span>
+    <span><strong>AGRI Publish Engine v5.3</strong><small>Kiểm tra và xuất bản Knowledge Base</small></span>
+  </a>
+  <div class="top-actions">
+    <button id="btn-validate" class="button secondary">Kiểm tra dữ liệu</button>
+    <button id="btn-publish" class="button">🚀 Xuất bản</button>
+  </div>
+</header>
+
+<main class="publish-layout">
+  <section class="publish-main">
+    <div class="page-head">
+      <div>
+        <p class="eyebrow">PUBLISH ENGINE</p>
+        <h1>Xuất bản Knowledge Base</h1>
+        <p class="lead">Kiểm tra toàn bộ dữ liệu trước khi tạo gói cập nhật.</p>
+      </div>
+    </div>
+
+    <div class="stats">
+      <article><span id="stat-total">0</span><small>Tổng đối tượng</small></article>
+      <article><span id="stat-valid">0</span><small>Hợp lệ</small></article>
+      <article><span id="stat-warning">0</span><small>Cảnh báo</small></article>
+      <article><span id="stat-error">0</span><small>Lỗi</small></article>
+    </div>
+
+    <section class="panel">
+      <div class="panel-head">
+        <h2>Kết quả kiểm tra</h2>
+        <span id="overall-status" class="status neutral">Chưa kiểm tra</span>
+      </div>
+      <div id="validation-list" class="validation-list"></div>
+    </section>
+
+    <section class="panel">
+      <div class="panel-head">
+        <h2>Tệp sẽ được tạo</h2>
+      </div>
+      <div id="file-list" class="file-list"></div>
+    </section>
+  </section>
+
+  <aside class="publish-side">
+    <section class="panel">
+      <h2>Quy trình</h2>
+      <ol class="steps">
+        <li>Biên soạn nội dung.</li>
+        <li>Lưu toàn bộ dữ liệu.</li>
+        <li>Kiểm tra dữ liệu.</li>
+        <li>Bấm <strong>Xuất bản</strong>.</li>
+        <li>Tải các file tạo ra.</li>
+        <li>Đưa lên GitHub và Commit.</li>
+      </ol>
+    </section>
+
+    <section class="panel">
+      <h2>Thư mục đích</h2>
+      <ul class="folder-list">
+        <li><code>knowledge/animals/</code></li>
+        <li><code>knowledge/plants/</code></li>
+        <li><code>knowledge/aquaculture/</code></li>
+        <li><code>knowledge/standards/</code></li>
+        <li><code>knowledge/index/</code></li>
+      </ul>
+    </section>
+  </aside>
+</main>
+
+<dialog id="publish-dialog">
+  <div class="dialog-head">
+    <strong>Gói xuất bản đã sẵn sàng</strong>
+    <button id="close-dialog">×</button>
+  </div>
+  <div class="dialog-body">
+    <p>Hệ thống sẽ tải lần lượt:</p>
+    <ul id="download-summary"></ul>
+    <button id="btn-download-all" class="button">Tải toàn bộ</button>
+  </div>
+</dialog>
+
+<script src="assets/publish.js"></script>
+</body>
+</html>
