@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Xuất bản AGRI Knowledge Base</title>
+  <link rel="stylesheet" href="../assets/studio.css">
+  <link rel="stylesheet" href="publish.css">
+</head>
+<body>
+<header class="topbar">
+  <a class="brand" href="../knowledge/">
+    <span class="logo">A</span>
+    <span><strong>AGRI Publisher v3.1</strong><small>Đưa đối tượng vào Knowledge Base</small></span>
+  </a>
+</header>
+
+<main class="publisher">
+  <section class="intro">
+    <p class="eyebrow">XUẤT BẢN</p>
+    <h1>Đưa đối tượng vào Knowledge Base</h1>
+    <p>Chọn file đối tượng đã xuất từ AGRI Studio, kiểm tra thông tin rồi tạo hai file sẵn sàng đưa lên GitHub.</p>
+  </section>
+
+  <section class="panel">
+    <label class="drop-zone" for="object-file">
+      <strong>Chọn file đối tượng JSON</strong>
+      <span>Ví dụ: ga-sao.json, ga-ai-cap.json, cao-su.json</span>
+      <input id="object-file" type="file" accept=".json,application/json">
+    </label>
+
+    <div id="preview" class="preview empty">Chưa chọn file.</div>
+
+    <div class="field-row">
+      <label class="field">
+        <span>Loại tri thức</span>
+        <select id="knowledge-type">
+          <option value="animal">Vật nuôi</option>
+          <option value="plant">Cây trồng</option>
+          <option value="aquaculture">Thủy sản</option>
+          <option value="standard">Tiêu chuẩn</option>
+        </select>
+      </label>
+      <label class="field">
+        <span>Thư mục đích</span>
+        <input id="target-folder" readonly>
+      </label>
+    </div>
+
+    <div class="actions">
+      <button id="btn-object" class="button secondary" disabled>Tải file đối tượng chuẩn</button>
+      <button id="btn-index" class="button" disabled>Tải knowledge.json</button>
+    </div>
+  </section>
+
+  <section class="panel guide">
+    <h2>Sau khi tải file</h2>
+    <ol>
+      <li>Đưa file đối tượng vào đúng thư mục <code>knowledge/...</code>.</li>
+      <li>Đưa <code>knowledge.json</code> vào <code>knowledge/index/</code>.</li>
+      <li>Commit changes trên GitHub.</li>
+    </ol>
+  </section>
+</main>
+
+<script src="publish.js"></script>
+</body>
+</html>
