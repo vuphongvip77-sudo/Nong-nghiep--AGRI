@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Knowledge Manager | AGRI Platform</title>
+  <link rel="stylesheet" href="../assets/platform.css">
+  <link rel="stylesheet" href="assets/knowledge-manager.css">
+</head>
+<body>
+<header class="topbar">
+  <a class="brand" href="../">
+    <span class="logo">A</span>
+    <span><strong>AGRI Knowledge Manager</strong><small>Quản lý đối tượng tri thức</small></span>
+  </a>
+  <div class="top-actions">
+    <button id="btn-new" class="button secondary">+ Đối tượng mới</button>
+    <button id="btn-export" class="button">Xuất dữ liệu</button>
+  </div>
+</header>
+
+<div class="km-shell">
+  <aside class="tree-panel">
+    <div class="panel-title">Kho tri thức</div>
+    <button class="tree-item active" data-type="">📚 Tất cả</button>
+    <button class="tree-item" data-type="animal">🐔 Vật nuôi</button>
+    <button class="tree-item" data-type="plant">🌱 Cây trồng</button>
+    <button class="tree-item" data-type="aquaculture">🐟 Thủy sản</button>
+    <button class="tree-item" data-type="standard">📄 Tiêu chuẩn</button>
+    <a class="tree-item link" href="../">🏠 Dashboard</a>
+  </aside>
+
+  <section class="list-panel">
+    <div class="list-toolbar">
+      <input id="search" placeholder="Tìm theo tên, mô tả hoặc từ khóa...">
+      <select id="sort">
+        <option value="name">Sắp xếp theo tên</option>
+        <option value="updated">Mới cập nhật</option>
+        <option value="type">Theo loại</option>
+      </select>
+    </div>
+    <div id="object-list" class="object-list"></div>
+  </section>
+
+  <section class="detail-panel">
+    <div id="detail-empty" class="empty-state">
+      <div class="big-icon">📚</div>
+      <h2>Chọn một đối tượng</h2>
+      <p>Thông tin chi tiết sẽ hiển thị tại đây.</p>
+    </div>
+
+    <div id="detail-view" hidden>
+      <div class="detail-head">
+        <div>
+          <p class="eyebrow">ĐỐI TƯỢNG TRI THỨC</p>
+          <h1 id="detail-title"></h1>
+        </div>
+        <div class="detail-actions">
+          <button id="btn-edit" class="button secondary">Sửa</button>
+          <button id="btn-delete" class="button danger">Xóa</button>
+        </div>
+      </div>
+
+      <div class="meta-grid">
+        <div><small>Loại</small><strong id="detail-type"></strong></div>
+        <div><small>Chuyên mục</small><strong id="detail-category"></strong></div>
+        <div><small>Mã đường dẫn</small><strong id="detail-slug"></strong></div>
+        <div><small>Cập nhật</small><strong id="detail-updated"></strong></div>
+      </div>
+
+      <div class="detail-block">
+        <h2>Mô tả</h2>
+        <p id="detail-summary"></p>
+      </div>
+
+      <div class="detail-block">
+        <h2>Các mục nội dung</h2>
+        <div id="section-list" class="section-list"></div>
+      </div>
+
+      <div class="detail-links">
+        <a id="public-link" class="button" target="_blank">Xem trang công khai</a>
+      </div>
+    </div>
+  </section>
+</div>
+
+<dialog id="editor-dialog">
+  <form method="dialog" id="editor-form">
+    <div class="dialog-head">
+      <strong id="dialog-title">Đối tượng mới</strong>
+      <button value="cancel" class="dialog-close">×</button>
+    </div>
+    <div class="dialog-body">
+      <input id="edit-index" type="hidden">
+      <label class="field"><span>Tên đối tượng *</span><input id="name" required></label>
+      <label class="field"><span>Loại tri thức</span>
+        <select id="type">
+          <option value="animal">Vật nuôi</option>
+          <option value="plant">Cây trồng</option>
+          <option value="aquaculture">Thủy sản</option>
+          <option value="standard">Tiêu chuẩn</option>
+        </select>
+      </label>
+      <label class="field"><span>Chuyên mục</span>
+        <select id="category">
+          <option value="chan-nuoi">Chăn nuôi</option>
+          <option value="trong-trot">Trồng trọt</option>
+          <option value="thuy-san">Thủy sản</option>
+          <option value="vietgap">VietGAP</option>
+          <option value="ocop">OCOP</option>
+        </select>
+      </label>
+      <label class="field"><span>Biểu tượng</span><input id="icon" maxlength="4" value="📚"></label>
+      <label class="field wide"><span>Mô tả ngắn</span><textarea id="summary" rows="4"></textarea></label>
+      <label class="field wide"><span>Từ khóa</span><input id="keywords" placeholder="gà sao, chuồng trại, úm"></label>
+    </div>
+    <div class="dialog-actions">
+      <button value="cancel" class="button secondary">Hủy</button>
+      <button id="btn-save" value="default" class="button">Lưu đối tượng</button>
+    </div>
+  </form>
+</dialog>
+
+<script src="assets/knowledge-manager.js"></script>
+</body>
+</html>
